@@ -13,5 +13,26 @@ _Work in progress_
 
 
 ## Download
+### Git Clone
+To avoid downloading the models during cloning due to their large size:
+```bash
+GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:Brainchip-Inc/models.git
+```
 
-_Work in progress_
+To download a specific model:
+```bash
+git lfs pull --include="[path to model]" --exclude=""
+```
+
+To download all models:
+```bash
+git lfs pull --include="*" --exclude=""
+```
+
+### GitHub UI
+Alternatively, you can download models directly from GitHub. Navigate to the model's page and
+click the "Download" button on the top right corner.
+
+## Model Visualization
+
+For a graphical representation of each model's architecture, we recommend using [Netron](https://netron.app/).
