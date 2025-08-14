@@ -16,7 +16,12 @@ the Akida solution.
 |--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
 | Vision | Classification | [MobileNetV2 0.75](vision/classification/mobilenetv2/imagenet) | 160        | ImageNet | 2.6M    | 8            | 62.85%   |
 | Vision | Classification | [MobileNetV2 0.35](vision/classification/mobilenetv2/imagenet) | 96         | ImageNet | 1.2M    | 8            | 43.47%   |
-| Vision | Classification | [MobileNetV2 0.35](vision/classification/mobilenetv4/imagenet) | 96         | ImageNet | 1.2M    | 8            | 43.47%   |
+| Vision | Classification | [MobileNetV2](vision/classification/mobilenetv2/CIFAR-10) | 128        | CIFAR-10 | 2.25M   | 8            | 93.96%   |
+| Vision | Classification | [MobileNetV2](vision/classification/mobilenetv2/OXFORD_FLOWERS) | 224  | OXFORD_FLOWERS | 2.4M   | 8       | 91.97%   |
+| Vision | Classification | [MobileNetV4](vision/classification/mobilenetv2/CIFAR-10) | 128        | CIFAR-10 | 2.5M   | 8            | 94.72%   |
+| Vision | Classification | [MobileNetV4](vision/classification/mobilenetv2/OXFORD_FLOWERS) | 224  | OXFORD_FLOWERS | 2.6M   | 8       | 85.41%   |
+| Vision | Classification | [Akida_MobileNet](vision/classification/mobilenetv2/CIFAR-10) | 128        | CIFAR-10 | 2.25M   | 8            | 91.92%   |
+| Vision | Classification | [Akida_MobileNet](vision/classification/mobilenetv2/OXFORD_FLOWERS) | 224  | OXFORD_FLOWERS | 3.3M   | 8       | 91.08%   |
 
 
 ## Download
