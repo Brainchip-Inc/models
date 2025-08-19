@@ -2,21 +2,27 @@
 
 ## Introduction
 
-The **Akida Model Zoo** is an extension of our [foundation models](https://doc.brainchipinc.com/model_zoo_performance.html#akida-2-0-models), 
-featuring a curated set of models validated on our Akida 2.0 FPGA platform. These models are
-made available to support the broader adoption of the Akida solution by developers, researchers,
-and enthusiasts alike.
+The **Akida Model Zoo** expands our [foundation models](https://doc.brainchipinc.com/model_zoo_performance.html#akida-2-0-models)
+with a hand-picked collection of models accelerated by the Akida 2.0 IP. Designed for developers,
+researchers, and AI enthusiasts, these ready-to-use models make it easier than ever to explore,
+build, and innovate with the Akida solution.
 
 ## Models
 
-Float and quantized models are available, with the quantized version converted and evaluated using
-the Akida solution.
+Both **float** and **quantized** models are available, with quantized versions converted and
+evaluated on the **Akida solution**. For each model, the number of nodes required to run on a
+minimal Akida IP configuration is provided, enabling straightforward assessment of performance
+and deployment needs.  
 
-| Domain | Use case       | Architecture                                                   | Resolution | Dataset  | #Params | Quantization | Accuracy |
-|--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
-| Vision | Classification | [MobileNetV2 1.0](vision/classification/mobilenetv2/imagenet)  | 224        | ImageNet | 3.5M    | 8            | 70.35%   |
-| Vision | Classification | [MobileNetV2 0.75](vision/classification/mobilenetv2/imagenet) | 160        | ImageNet | 2.6M    | 8            | 62.85%   |
-| Vision | Classification | [MobileNetV2 0.35](vision/classification/mobilenetv2/imagenet) | 96         | ImageNet | 1.2M    | 8            | 43.47%   |
+In addition, some models can be evaluated directly through [Akida Cloud](https://brainchip.com/aclp/)
+☁️, offering a convenient way to explore and experiment without local hardware.
+
+
+| Domain | Use case       | Architecture                                                      | Resolution | Dataset  | #Params | Quantization | Accuracy | Minimal #Nodes |
+|--------|----------------|-------------------------------------------------------------------|------------|----------|---------|--------------|----------|----------------|
+| Vision | Classification | [MobileNetV2 1.0](vision/classification/mobilenetv2/imagenet)     | 224        | ImageNet | 3.5M    | 8            | 70.35%   | 7              |
+| Vision | Classification | [MobileNetV2 0.75](vision/classification/mobilenetv2/imagenet) ☁️  | 160        | ImageNet | 2.6M    | 8            | 62.85%   | 4              |
+| Vision | Classification | [MobileNetV2 0.35](vision/classification/mobilenetv2/imagenet) ☁️  | 96         | ImageNet | 1.2M    | 8            | 43.47%   | 2              |
 
 ## Download
 ### Git Clone
