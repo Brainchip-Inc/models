@@ -40,7 +40,6 @@ jobs:
       - name: Run model checks
         if: steps.find_files.outputs.files != ''
         run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)/CI
           for f in ${{ steps.find_files.outputs.files }}; do
             echo "Checking model: $f"
             git lfs pull --include="$f" --exclude=""

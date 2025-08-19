@@ -1,5 +1,3 @@
-import sys
-import os
 import argparse
 
 import akida
@@ -7,7 +5,6 @@ from cnn2snn import convert
 from tensorflow.keras.models import load_model
 import onnx
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "CI"))
 from compute_device import compute_min_device
 
 
