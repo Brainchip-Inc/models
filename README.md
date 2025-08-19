@@ -14,6 +14,7 @@ the Akida solution.
 
 | Domain | Use case       | Architecture                                                   | Resolution | Dataset  | #Params | Quantization | Accuracy |
 |--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
+| Vision | Classification | [MobileNetV2 1.0](vision/classification/mobilenetv2/imagenet)  | 224        | ImageNet | 3.5M    | 8            | 70.35%   |
 | Vision | Classification | [MobileNetV2 0.75](vision/classification/mobilenetv2/imagenet) | 160        | ImageNet | 2.6M    | 8            | 62.85%   |
 | Vision | Classification | [MobileNetV2 0.35](vision/classification/mobilenetv2/imagenet) | 96         | ImageNet | 1.2M    | 8            | 43.47%   |
 
