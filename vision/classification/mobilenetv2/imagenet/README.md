@@ -7,7 +7,6 @@ optimum-cli export onnx --model google/mobilenet_v2_1.0_224 mobilenet_v2_1.0_224
 optimum-cli export onnx --model google/mobilenet_v2_0.75_160 mobilenet_v2_0.75_160
 optimum-cli export onnx --model google/mobilenet_v2_0.35_96 mobilenet_v2_0.35_96
 ```
-
 ### Environment
 ```
 onnx: 1.16.1 
