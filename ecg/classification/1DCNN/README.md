@@ -26,7 +26,6 @@ cnn2snn==2.13.0
 quantizeml==0.16.0
 ```
 
----
 
 
 ## Run
