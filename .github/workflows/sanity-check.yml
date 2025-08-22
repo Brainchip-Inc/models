@@ -1,0 +1,52 @@
+name: Akida compatibility check
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # ensure full history so diffs against main work
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install akida cnn2snn
+
+      - name: Fetch main branch
+        run: |
+          git fetch origin main
+
+      - name: Find added *_i8_* files
+        id: find_files
+        run: |
+          FILES=$(git diff --diff-filter=A --name-only origin/main...HEAD | grep "_i8_" || true)
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+
+      - name: Run model checks
+        if: steps.find_files.outputs.files != ''
+        run: |
+          while read -r f; do
+            [ -z "$f" ] && continue
+            echo "Checking model: $f"
+            git lfs pull --include="$f" --exclude=""
+            python CI/check_model.py --model "$f"
+          done <<< "${{ steps.find_files.outputs.files }}"
+

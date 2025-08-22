@@ -2,15 +2,20 @@
 
 ## Introduction
 
-The **Akida Model Zoo** is an extension of our [foundation models](https://doc.brainchipinc.com/model_zoo_performance.html#akida-2-0-models), 
-featuring a curated set of models validated on our Akida 2.0 FPGA platform. These models are
-made available to support the broader adoption of the Akida solution by developers, researchers,
-and enthusiasts alike.
+The **Akida Model Zoo** expands our [foundation models](https://doc.brainchipinc.com/model_zoo_performance.html#akida-2-0-models)
+with a hand-picked collection of models accelerated by the Akida 2.0 IP. Designed for developers,
+researchers, and AI enthusiasts, these ready-to-use models make it easier than ever to explore,
+build, and innovate with the Akida solution.
 
 ## Models
 
-Float and quantized models are available, with the quantized version converted and evaluated using
-the Akida solution.
+Both **float** and **quantized** models are available, with quantized versions converted and
+evaluated on the **Akida solution**. For each model, the number of nodes required to run on a
+minimal Akida IP configuration is provided, enabling straightforward assessment of performance
+and deployment needs.  
+
+In addition, some models can be evaluated directly through [Akida Cloud](https://brainchip.com/aclp/)
+☁️, offering a convenient way to explore and experiment without local hardware.
 
 | Domain | Use case       | Architecture                                                   | Resolution | Dataset  | #Params | Quantization | Accuracy |
 |--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
@@ -29,9 +34,6 @@ the Akida solution.
 |--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
 |  ECG   | Classification | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                      | 360        | MIT-BIH  | 74K    | 8            | 97.3%   |
 |  ECG   | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                 | 144        | ECG5000  | 290K    | 8            | 94.0%   |
-
-
-
 
 
 ## Download
