@@ -30,7 +30,6 @@ The internal code repository for this project: [**Repository**](https://git.corp
 The following dependencies are required to build and run this model:  
 
 ```
-
 matplotlib==3.8.4
 seaborn==0.13.2
 numpy==1.26.4
@@ -39,8 +38,8 @@ scikit-learn==1.7.0
 tensorflow==2.15.0
 cnn2snn==2.13.0
 quantizeml==0.16.0
+```
 
----
 
 ## Run
 
