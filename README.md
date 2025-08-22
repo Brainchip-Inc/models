@@ -24,6 +24,16 @@ the Akida solution.
 | Vision | Classification | [Akida_MobileNet](vision/classification/mobilenetv2/OXFORD_FLOWERS) | 224  | OXFORD_FLOWERS | 3.3M   | 8       | 91.08%   |
 
 
+
+| Domain | Use case       | Architecture                                                  | Seq. Length | Dataset  | #Params | Quantization | F1 Score |
+|--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
+|  ECG   | Classification | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                      | 360        | MIT-BIH  | 74K    | 8            | 97.3%   |
+|  ECG   | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                 | 144        | ECG5000  | 290K    | 8            | 94.0%   |
+
+
+
+
+
 ## Download
 ### Git Clone
 To avoid downloading the models during cloning due to their large size:
