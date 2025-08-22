@@ -28,6 +28,7 @@ In addition, some models can be evaluated directly through [Akida Cloud](https:/
 | Vision | Classification | [MobileNetV2_1.0](vision/classification/mobilenetv2/oxford_flowers) | 224        | Oxford_Flower | 2.4M    | 8            | 91.97%   | 7              |
 | Vision | Classification | [MobileNetV4_1.0](vision/classification/mobilenetv4/cifar10)        | 128        | CIFAR-10      | 2.5M    | 8            | 94.72%   | 7              |
 | Vision | Classification | [MobileNetV4_1.0](vision/classification/mobilenetv4/oxford_flowers) | 224        | Oxford_Flower | 2.6M    | 8            | 85.41%   | 8              |
+| Vision | Classification | [Autism_Detection](vision/classification/autism_detection/) | 128        | Kaggle | 2.13M   | 8            | 84.00%   | 3              |
 
 ## Download
 ### Git Clone
