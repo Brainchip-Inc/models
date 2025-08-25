@@ -29,6 +29,14 @@ In addition, some models can be evaluated directly through [Akida Cloud](https:/
 | Vision | Classification | [MobileNetV4_1.0](vision/classification/mobilenetv4/cifar10)        | 128        | CIFAR-10      | 2.5M    | 8            | 94.72%   | 7              |
 | Vision | Classification | [MobileNetV4_1.0](vision/classification/mobilenetv4/oxford_flowers) | 224        | Oxford_Flower | 2.6M    | 8            | 85.41%   | 8              |
 
+
+| Domain | Use case       | Architecture                                                  | Seq. Length | Dataset  | #Params | Quantization | F1 Score |
+|--------|----------------|----------------------------------------------------------------|------------|----------|---------|--------------|----------|
+|  ECG   | Classification | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                      | 360        | MIT-BIH  | 74K    | 8            | 97.3%   |
+|  ECG   | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                 | 144        | ECG5000  | 290K    | 8            | 94.0%   |
+
+
+
 ## Download
 ### Git Clone
 To avoid downloading the models during cloning due to their large size:
