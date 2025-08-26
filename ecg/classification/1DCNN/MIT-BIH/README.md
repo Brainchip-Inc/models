@@ -5,10 +5,6 @@ This project performs ECG heartbeat classification (4 classes) using a compact 2
 Classifying irregular heartbeats is critical for identifying their origin and assessing the potential severity of arrhythmias, which directly impacts diagnosis and treatment. Key discriminative features lie in **QRS morphology and timing** of the beats, making **CNNs**  well-suited for this task due to their ability to efficiently capture local temporal patterns.
 
 
-## Source  
-The internal code repository for this project: [**Repository**](https://git.corp.brainchipinc.com/brainchipResearch/akida_models_bootcamp/)
-
-
 ---
 
 ## Environment  
@@ -25,13 +21,3 @@ wfdb==4.3.0
 cnn2snn==2.13.0
 quantizeml==0.16.0
 ```
-
-
-
-## Run
-
-```bash
-pip install -r requirements.txt
-python main.py          # train & evaluate, quantize, test, and export
-
-
