@@ -5,6 +5,10 @@ This project performs ECG heartbeat classification (4 classes) using a compact 2
 Classifying irregular heartbeats is critical for identifying their origin and assessing the potential severity of arrhythmias, which directly impacts diagnosis and treatment. Key discriminative features lie in **QRS morphology and timing** of the beats, making **CNNs**  well-suited for this task due to their ability to efficiently capture local temporal patterns.
 
 
+## Source  
+This model uses [**LeNet**](https://huggingface.co/mindspore-ai/LeNet).
+
+
 ---
 
 ## Environment  

@@ -1,7 +1,8 @@
 # ECG Anomaly Detection with Quantized Autoencoder
-
 This project implements an anomaly detector for ECG data using a convolutional autoencoder, evaluated in both float and quantized (8-bit) form and converted to SNN.
 
+## Source  
+This model uses [**LeNet**](https://huggingface.co/mindspore-ai/LeNet).
 
 ---
 ## Environment  
