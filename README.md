@@ -1,8 +1,8 @@
-# Akida Model Zoo
+# Akida 2 Model Zoo
 
 ## Introduction
 
-The **Akida Model Zoo** expands our [foundation models](https://doc.brainchipinc.com/model_zoo_performance.html#akida-2-0-models)
+The **Akida 2 Model Zoo** expands our [foundation models](https://doc.brainchipinc.com/model_zoo_performance.html#akida-2-0-models)
 with a hand-picked collection of models accelerated by the Akida 2.0 IP. Designed for developers,
 researchers, and AI enthusiasts, these ready-to-use models make it easier than ever to explore,
 build, and innovate with the Akida solution.
