@@ -12,25 +12,25 @@ build, and innovate with the Akida solution.
 Both **float** and **quantized** models are available, with quantized versions converted and
 evaluated on the **Akida solution**. For each model, the number of nodes required to run on a
 minimal Akida IP configuration is provided, enabling straightforward assessment of performance
-and deployment needs.  
+and deployment needs.
 
 In addition, some models can be evaluated directly through [Akida Cloud](https://brainchip.com/aclp/)
 ☁️, offering a convenient way to explore and experiment without local hardware.
 
 | Domain | Use case          | Architecture                                                        | Resolution | Dataset       | #Params | Quantization | Accuracy | F1 Score | Minimal #Nodes |
 |--------|-------------------|---------------------------------------------------------------------|------------|---------------|---------|--------------|----------|----------|----------------|
-| Vision | Classification    | [MobileNetV1_1.0](vision/classification/mobilenetv1/cifar10)        | 128        | CIFAR-10      | 2.25M   | 8            | 91.92%   |          | 5 ☁️           |
+| Vision | Classification    | [MobileNetV1_1.0](vision/classification/mobilenetv1/cifar10)        | 128        | CIFAR-10      | 2.25M   | 8            | 91.92%   |          | 5 ☁️          |
 | Vision | Classification    | [MobileNetV1_1.0](vision/classification/mobilenetv1/oxford_flowers) | 224        | Oxford_Flower | 3.3M    | 8            | 91.08%   |          | 7              |
-| Vision | Classification    | [MobileNetV2 1.0](vision/classification/mobilenetv2/imagenet)       | 224        | ImageNet      | 3.5M    | 8            | 70.35%   |          | 7              
-| Vision | Classification    | [MobileNetV2 0.75](vision/classification/mobilenetv2/imagenet)      | 160        | ImageNet      | 2.6M    | 8            | 62.85%   |          | 4 ☁️           |
-| Vision | Classification    | [MobileNetV2 0.35](vision/classification/mobilenetv2/imagenet)      | 96         | ImageNet      | 1.2M    | 8            | 43.47%   |          | 2 ☁️           |
-| Vision | Classification    | [MobileNetV2_1.0](vision/classification/mobilenetv2/cifar10)        | 128        | CIFAR-10      | 2.25M   | 8            | 93.96%   |          | 5 ☁️           |           
+| Vision | Classification    | [MobileNetV2 1.0](vision/classification/mobilenetv2/imagenet)       | 224        | ImageNet      | 3.5M    | 8            | 70.35%   |          | 7              |
+| Vision | Classification    | [MobileNetV2 0.75](vision/classification/mobilenetv2/imagenet)      | 160        | ImageNet      | 2.6M    | 8            | 62.85%   |          | 4 ☁️          |
+| Vision | Classification    | [MobileNetV2 0.35](vision/classification/mobilenetv2/imagenet)      | 96         | ImageNet      | 1.2M    | 8            | 43.47%   |          | 2 ☁️          |
+| Vision | Classification    | [MobileNetV2_1.0](vision/classification/mobilenetv2/cifar10)        | 128        | CIFAR-10      | 2.25M   | 8            | 93.96%   |          | 5 ☁️          |
 | Vision | Classification    | [MobileNetV2_1.0](vision/classification/mobilenetv2/oxford_flowers) | 224        | Oxford_Flower | 2.4M    | 8            | 91.97%   |          | 7              |
 | Vision | Classification    | [MobileNetV4_1.0](vision/classification/mobilenetv4/cifar10)        | 128        | CIFAR-10      | 2.5M    | 8            | 94.72%   |          | 7              |
 | Vision | Classification    | [MobileNetV4_1.0](vision/classification/mobilenetv4/oxford_flowers) | 224        | Oxford_Flower | 2.6M    | 8            | 85.41%   |          | 8              |
 | Vision | Classification    | [spatiotemporal](vision/classification/spatiotemporal/FallVision)   | 224        | FallVision    | 1.34M   | 8            | 98.36%   |          | 16             |
-|  ECG   | Classification    | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                           | 360        | MIT-BIH       | 74K     | 8            |          | 97.3%    | 1 ☁️           |
-|  ECG   | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                         | 144        | ECG5000       | 290K    | 8            |          | 94.0%    | 2 ☁️           |
+|  ECG   | Classification    | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                           | 360        | MIT-BIH       | 74K     | 8            |          | 97.3%    | 1 ☁️          |
+|  ECG   | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                         | 144        | ECG5000       | 290K    | 8            |          | 94.0%    | 2 ☁️          |
 
 
 ## Download

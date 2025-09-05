@@ -1,9 +1,9 @@
 # MobileNetV2 (Custom Model)
 
-## Source  
+## Source
 This model uses [**MobileNetV2**](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2)
-from TensorFlow Keras as the backbone, initialized with ImageNet pretrained weights.  
-A rescaling layer `(1./127.5, offset=-1)` is applied for input normalization, and a custom dense classifier head is added.  
+from TensorFlow Keras as the backbone, initialized with ImageNet pretrained weights.
+A rescaling layer `(1./127.5, offset=-1)` is applied for input normalization, and a custom dense classifier head is added.
 
 ```python
 def build_model():
@@ -19,7 +19,7 @@ def build_model():
     return model, base
 ```
 
-### Environment  
+### Environment
 ```
 tensorflow: 2.15
 keras: 2.15
@@ -28,15 +28,15 @@ quantizeml: 0.16.0
 ```
 
 
-## Training Details  
-- **Backbone**: MobileNetV2 pretrained on ImageNet  
-- **Alpha**: `MBV2_ALPHA = 1`  
+## Training Details
+- **Backbone**: MobileNetV2 pretrained on ImageNet
+- **Alpha**: `MBV2_ALPHA = 1`
 
 
-## References  
-- **MobileNet-v2** Model from the paper [Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)  
-- TensorFlow [MobileNetV2 documentation](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2)  
+## References
+- **MobileNet-v2** Model from the paper [Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
+- TensorFlow [MobileNetV2 documentation](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2)
 
 
-## License  
+## License
 Apache 2.0 License

@@ -1,13 +1,13 @@
 # MobileNetV1 (BrainChip Model)
 
-## Source  
+## Source
 This model is an internal implementation of **MobileNetV1** for ImageNet classification,
 provided through the BrainChip [akida-models](https://pypi.org/project/akida-models/)
-python package.  
-It supports both standard and quantized variants (4-bit and 8-bit) with adjustable width multiplier (`alpha`).  
+python package.
+It supports both standard and quantized variants (4-bit and 8-bit) with adjustable width multiplier (`alpha`).
 See [online documentation](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.mobilenet_imagenet) for details
 
-### Environment  
+### Environment
 ```
 tensorflow: 2.15
 keras: 2.15
@@ -15,8 +15,8 @@ akida_models: 1.7.0
 quantizeml: 0.16.0
 ```
 
-## References  
-**MobileNet-v1** Model from the paper [Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)  
+## References
+**MobileNet-v1** Model from the paper [Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)
 
 
 ## License
