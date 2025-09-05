@@ -28,6 +28,7 @@ In addition, some models can be evaluated directly through [Akida Cloud](https:/
 | Vision | Classification    | [MobileNetV2_1.0](vision/classification/mobilenetv2/oxford_flowers) | 224        | Oxford_Flower | 2.4M    | 8            | 91.97%   |          | 7              |
 | Vision | Classification    | [MobileNetV4_1.0](vision/classification/mobilenetv4/cifar10)        | 128        | CIFAR-10      | 2.5M    | 8            | 94.72%   |          | 7              |
 | Vision | Classification    | [MobileNetV4_1.0](vision/classification/mobilenetv4/oxford_flowers) | 224        | Oxford_Flower | 2.6M    | 8            | 85.41%   |          | 8              |
+| Vision | Classification    | [spatiotemporal](vision/classification/spatiotemporal/FallVision)   | 224        | FallVision    | 1.34M   | 8            | 98.36%   |          | 16             |
 |  ECG   | Classification    | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                           | 360        | MIT-BIH       | 74K     | 8            |          | 97.3%    | 1 ☁️           |
 |  ECG   | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                         | 144        | ECG5000       | 290K    | 8            |          | 94.0%    | 2 ☁️           |
 
