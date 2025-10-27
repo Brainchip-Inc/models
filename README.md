@@ -31,14 +31,14 @@ In addition, some models can be evaluated directly through [Akida Cloud](https:/
 | Vision        | Classification    | [spatiotemporal](vision/classification/spatiotemporal/FallVision)         | 224        | FallVision    | 1.34M   | 8            | 98.36%   |          |       | 16             |
 | Vision        | Classification    | [MLP](vision/classification/MLP/MNIST)                                    | 784        | MNIST         | 203.5K  | 8            | 98.05%   |          |       | 1 ☁️          |
 | Vision        | Classification    | [LogisticRegression](vision/classification/LogisticRegression/MNIST)      | 784        | MNIST         | 7.9K    | 8            | 84.52%   |          |       | 1 ☁️          |
-|  ECG          | Classification    | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                                 | 360        | MIT-BIH       | 74K     | 8            |          | 97.3%    |       | 1 ☁️          | 
+|  ECG          | Classification    | [1DCNN](ecg/classification/1DCNN/MIT-BIH)                                 | 360        | MIT-BIH       | 74K     | 8            |          | 97.3%    |       | 1 ☁️          |
 |  ECG          | Anomaly Detection | [1DCNN](ecg/anomalydetection/1DCNN/ECG5000)                               | 144        | ECG5000       | 290K    | 8            |          | 94.0%    |       | 1 ☁️          |
 | Tabular       | Classification    | [LogisticR.](tabular/classification/LogisticRegression/Breast_Cancer)     | 30         | Breast_Cancer | 169     | 8            | 93.9%    |          |       | 1 ☁️          |
 | Synthetic     | Regression        | [MLP](synthetic/regression/MLP/1D_Curve)                                  | 1          | 1D_Curve      | 6.2K    | 8            |          |          | 0.136 | 1 ☁️          |
-| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/soda_bottles)| 224        | soda_bottle   | 2.43M   | 8            | 91.53%   |          |       | 6 ☁️         |
-| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/trail_camera)| 224        | trail_camera  | 2.43M   | 8            | 84.74%   |          |       | 6 ☁️         |
-| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/road_signs)  | 224        | road_signs    | 2.43M   | 8            | 65.46%   |          |       | 6 ☁️         |
-| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/furniture)   | 224        | furniture     | 2.43M   | 8            | 79.21%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/soda_bottles)| 224        | Soda_bottle   | 2.43M   | 8            | 91.53%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/trail_camera)| 224        | Trail_camera  | 2.43M   | 8            | 84.74%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/road_signs)  | 224        | Road_signs    | 2.43M   | 8            | 65.46%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/furniture)   | 224        | Furniture     | 2.43M   | 8            | 79.21%   |          |       | 6 ☁️         |
 
 
 ## Download

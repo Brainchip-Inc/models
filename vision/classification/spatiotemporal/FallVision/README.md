@@ -1,12 +1,7 @@
 # FallVision: Neuromorphic Fall Detection using Akida
-===================================================
-
-Video-based fall detection models on BrainChip's Akida neuromorphic hardware, achieving 98%+ accuracy with ultra-low power consumption.
-
 
 ## Source
-This model uses [**Brainchip Spatiotemporal TENNs**](https://doc.brainchipinc.com/examples/spatiotemporal/plot_0_introduction_to_spatiotemporal_models.html#sphx-glr-examples-spatiotemporal-plot-0-introduction-to-spatiotemporal-models-py).
-
+Video-based fall detection models on BrainChip's Akida neuromorphic hardware, achieving 98%+ accuracy with ultra-low power consumption.
 
 ## Environment
 ```
@@ -26,3 +21,9 @@ h5py>=3.6.0
 Pillow>=9.0.0
 tensorboard>=2.10.0
 ```
+
+## References
+- This model uses [**Brainchip Spatiotemporal TENNs**](https://doc.brainchipinc.com/examples/spatiotemporal/plot_0_introduction_to_spatiotemporal_models.html#sphx-glr-examples-spatiotemporal-plot-0-introduction-to-spatiotemporal-models-py).
+
+## License
+Apache 2.0 License
