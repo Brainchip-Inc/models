@@ -7,7 +7,7 @@ python package.
 It supports both standard and quantized variants (4-bit and 8-bit) with adjustable width multiplier (`alpha`).
 See [online documentation](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.mobilenet_imagenet) for details
 
-### Environment
+## Environment
 ```
 tensorflow: 2.15
 keras: 2.15
@@ -17,7 +17,6 @@ quantizeml: 0.16.0
 
 ## References
 **MobileNet-v1** Model from the paper [Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)
-
 
 ## License
 Original model file: https://github.com/keras-team/keras-applications/blob/master/keras_applications/mobilenet.py
