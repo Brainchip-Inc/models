@@ -14,7 +14,7 @@ quantizeml: 1.0.1
 
 ## References
 - **AkidaNet18**: Akida model API [AkidaNet18 architecture](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.akidanet18_imagenet)
-- **Dataset**: [soda bottle detection](https://universe.roboflow.com/roboflow-100/soda-bottles/dataset/3)
+- **Dataset**:  [soda bottles detection](https://universe.roboflow.com/roboflow-100/soda-bottles/dataset/3)
 
 ## License
 Apache 2.0 License (models only)

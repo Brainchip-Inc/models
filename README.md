@@ -39,6 +39,19 @@ In addition, some models can be evaluated directly through [Akida Cloud](https:/
 | Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/trail_camera)| 224        | Trail_camera  | 2.43M   | 8            | 84.74%   |          |       | 6 ☁️         |
 | Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/road_signs)  | 224        | Road_signs    | 2.43M   | 8            | 65.46%   |          |       | 6 ☁️         |
 | Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/furniture)   | 224        | Furniture     | 2.43M   | 8            | 79.21%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/aerial-cows)        | 224        | aerial-cows          | 2.43M   | 8            | 30.91%   |          |       | 16         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/bees)               | 224        | bees                 | 2.43M   | 8            | 59.99%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/cable-damage)       | 224        | cable-damage         | 2.43M   | 8            | 77.32%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/corrosion)          | 224        | corrosion            | 2.43M   | 8            | 39.06%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/digits)             | 224        | digits               | 2.43M   | 8            | 92.32%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/face_detection)     | 224        | face detection       | 2.43M   | 8            | 75.98%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/hand-gestures)      | 224        | hand-gestures        | 2.43M   | 8            | 53.52%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/license_plate_detection)      | 224        | License plate        | 2.43M   | 8            | 96.22%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/liver-disease)      | 224        | liver-disease        | 2.43M   | 8            | 40.57%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/phages)             | 224        | phages               | 2.43M   | 8            | 67.18%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/sign-language)      | 224        | sign-language        | 2.43M   | 8            | 85.88%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/stomata-cells)      | 224        | stomata-cells        | 2.43M   | 8            | 52.14%   |          |       | 6 ☁️         |
+| Vision        | Detection         | [AkidaNet18/CenterNet](vision/detection/akidanet18_centernet/underwater-objects) | 224        | underwater-objects   | 2.43M   | 8            | 44.89%   |          |       | 6 ☁️         |
 
 
 ## Download

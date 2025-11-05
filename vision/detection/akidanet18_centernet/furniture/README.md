@@ -14,7 +14,7 @@ quantizeml: 1.0.1
 
 ## References
 - **AkidaNet18**: Akida model API [AkidaNet18 architecture](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.akidanet18_imagenet)
-- **Dataset**: [furniture detection](https://universe.roboflow.com/projet-ai/furniture-azcxt/dataset/1)
+- **Dataset**:  [furniture detection](https://universe.roboflow.com/projet-ai/furniture-azcxt/dataset/1)
 
 ## License
 Apache 2.0 License (models only)

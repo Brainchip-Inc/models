@@ -14,7 +14,7 @@ quantizeml: 1.0.1
 
 ## References
 - **AkidaNet18**: Akida model API [AkidaNet18 architecture](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.akidanet18_imagenet)
-- **Dataset**:  [animal detection in trail cameras](https://universe.roboflow.com/roboflow-100/trail-camera)
+- **Dataset**:  [animal detection in trail cameras](https://universe.roboflow.com/roboflow-100/trail-camera/dataset/2)
 
 ## License
 Apache 2.0 License (models only)
