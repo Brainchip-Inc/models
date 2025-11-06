@@ -14,7 +14,7 @@ quantizeml: 1.0.1
 
 ## References
 - **AkidaNet18**: Akida model API [AkidaNet18 architecture](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.akidanet18_imagenet)
-- **Dataset**:  [road signs detection](https://universe.roboflow.com/roboflow-100/road-signs-6ih4y/dataset/2)
+- **Dataset**:  [sign language detection](https://universe.roboflow.com/roboflow-100/sign-language-sokdr/dataset/2)
 
 ## License
 Apache 2.0 License (models only)
