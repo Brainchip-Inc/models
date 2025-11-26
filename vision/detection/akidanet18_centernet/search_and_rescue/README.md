@@ -14,7 +14,7 @@ quantizeml: 1.0.1
 
 ## References
 - **AkidaNet18**: Akida model API [AkidaNet18 architecture](https://doc.brainchipinc.com/api_reference/akida_models_apis.html#akida_models.akidanet18_imagenet)
-- **Dataset**: [license plate detection](https://universe.roboflow.com/breast-cancer-m4afv/license_plate_detection-vnhcu/dataset/2)
+- **Dataset**: [search and rescue detection](https://www.kaggle.com/datasets/nikolasgegenava/sard-search-and-rescue)
 
 ## License
 Apache 2.0 License (models only)
