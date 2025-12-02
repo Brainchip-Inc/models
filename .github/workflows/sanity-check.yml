@@ -34,10 +34,13 @@ jobs:
         id: find_files
         run: |
           FILES=$(git diff --diff-filter=A --name-only origin/main...HEAD | grep "_i8_" || true)
-          echo "files=$FILES" >> $GITHUB_OUTPUT
+          # Encode in base64 to avoid formatting problems
+          FILES_B64=$(echo "$FILES" | base64 | tr -d '\n')
+          echo "files_b64=$FILES_B64" >> $GITHUB_OUTPUT
 
       - name: Run model checks
         if: steps.find_files.outputs.count > 0
         run: |
-          python CI/check_model.py --models "${{ steps.find_files.outputs.files }}"
+          FILES=$(echo "${{ steps.find_files.outputs.files_b64 }}" | base64 -d)
+          python CI/check_model.py --models "$FILES"
 

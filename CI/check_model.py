@@ -14,14 +14,7 @@ from filtered_stream import filtered_output
 
 
 def process_model(file_path):
-    try:
-        # Move this step of the YAML workflow into the Python script
-        # Download the file via Git LFS if necessary
-        # git lfs pull --include="$f" --exclude=""
-        subprocess.run(["git", "lfs", "pull", 
-            "--include", file_path,"--exclude", ""], 
-            capture_output=True)
-        
+    try:       
         print(f"Loading model: {file_path}")
         base_model = load_model(file_path)
     except Exception as e:
@@ -49,5 +42,11 @@ if __name__ == "__main__":
     with filtered_output():
         for model_file in args.model:
             if os.path.exists(model_file):
+                # Move this step of the YAML workflow into the Python script
+                # Download the file via Git LFS if necessary
+                # git lfs pull --include="$f" --exclude=""
+                subprocess.run(["git", "lfs", "pull", 
+                    "--include", model_file,"--exclude", ""], 
+                    capture_output=True)                
                 process_model(model_file)    
 
