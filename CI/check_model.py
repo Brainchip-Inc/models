@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     # Process each model
     with filtered_output():
-        for model_file in args.model:
+        for model_file in args.models:
             if os.path.exists(model_file):
                 # Move this step of the YAML workflow into the Python script
                 # Download the file via Git LFS if necessary
