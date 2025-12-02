@@ -1,11 +1,9 @@
 import argparse
+import os
 
-import akida
 from cnn2snn import convert
 from quantizeml import load_model
-
 from compute_device import compute_min_device
-
 
 def process_model(file_path):
     try:
@@ -29,8 +27,11 @@ def process_model(file_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", required=True, help="Path to model file (.h5 or .onnx)")
+    parser.add_argument("--models", nargs="+", required=True,
+        help="Path to model files (.h5 or .onnx)")
     args = parser.parse_args()
 
-    process_model(args.model)
-
+    # Process each model
+    for model_file in args.models:
+        if os.path.exists(model_file):
+            process_model(model_file)
