@@ -1,14 +1,27 @@
 import argparse
+import os
+import subprocess
+
+# Configure TensorFlow
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 import akida
 from cnn2snn import convert
 from quantizeml import load_model
-
 from compute_device import compute_min_device
+from filtered_stream import filtered_output
 
 
 def process_model(file_path):
     try:
+        # Move this step of the YAML workflow into the Python script
+        # Download the file via Git LFS if necessary
+        # git lfs pull --include="$f" --exclude=""
+        subprocess.run(["git", "lfs", "pull", 
+            "--include", file_path,"--exclude", ""], 
+            capture_output=True)
+        
         print(f"Loading model: {file_path}")
         base_model = load_model(file_path)
     except Exception as e:
@@ -29,8 +42,12 @@ def process_model(file_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", required=True, help="Path to model file (.h5 or .onnx)")
+    parser.add_argument("--models", nargs="+", help="Path to model files (.h5 or .onnx)")    
     args = parser.parse_args()
 
-    process_model(args.model)
+    # Process each model
+    with filtered_output():
+        for model_file in args.model:
+            if os.path.exists(model_file):
+                process_model(model_file)    
 

@@ -34,19 +34,10 @@ jobs:
         id: find_files
         run: |
           FILES=$(git diff --diff-filter=A --name-only origin/main...HEAD | grep "_i8_" || true)
-          {
-            echo "files<<EOF"
-            echo "$FILES"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
+          echo "files=$FILES" >> $GITHUB_OUTPUT
 
       - name: Run model checks
-        if: steps.find_files.outputs.files != ''
+        if: steps.find_files.outputs.count > 0
         run: |
-          while read -r f; do
-            [ -z "$f" ] && continue
-            echo "Checking model: $f"
-            git lfs pull --include="$f" --exclude=""
-            python CI/check_model.py --model "$f"
-          done <<< "${{ steps.find_files.outputs.files }}"
+          python CI/check_model.py --models "${{ steps.find_files.outputs.files }}"
 
