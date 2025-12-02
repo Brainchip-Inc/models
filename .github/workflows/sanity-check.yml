@@ -34,12 +34,18 @@ jobs:
         id: find_files
         run: |
           FILES=$(git diff --diff-filter=A --name-only origin/main...HEAD | grep "_i8_" || true)
-          # Encode in base64 to avoid formatting problems
+          # count lines (files). If FILES is empty, count should be 0
+          if [ -z "$FILES" ]; then
+            COUNT=0
+          else
+            COUNT=$(echo "$FILES" | wc -l | tr -d ' ')
+          fi
           FILES_B64=$(echo "$FILES" | base64 | tr -d '\n')
           echo "files_b64=$FILES_B64" >> $GITHUB_OUTPUT
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
 
       - name: Run model checks
-        if: steps.find_files.outputs.count > 0
+        if: ${{ steps.find_files.outputs.count != '0' }}
         run: |
           FILES=$(echo "${{ steps.find_files.outputs.files_b64 }}" | base64 -d)
           python CI/check_model.py --models "$FILES"
