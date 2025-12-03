@@ -15,6 +15,7 @@ import sys
 import time
 import argparse
 import subprocess
+import shutil
 import re
 
 def run_and_filter(cmd, delay=0.05):
@@ -26,6 +27,10 @@ def run_and_filter(cmd, delay=0.05):
         r'TF_FORCE_GPU_ALLOW_GROWTH|Overriding orig_value)'
         , re.IGNORECASE)        
     
+    # Prepare environment for subprocess to favor line-buffering / immediate flush
+    env = os.environ.copy()
+    env.setdefault('PYTHONUNBUFFERED', '1')    
+    
     # If the command is a Python script path and not executable, prefix
     # with the current Python interpreter to avoid PermissionError on CI.
     if isinstance(cmd, (list, tuple)) and cmd:
@@ -33,6 +38,19 @@ def run_and_filter(cmd, delay=0.05):
         if isinstance(first, str) and first.endswith('.py') and not os.access(first, os.X_OK):
             cmd = [sys.executable] + list(cmd)
 
+    # For non-Python commands, if 'stdbuf' is available, use it to request
+    # line-buffered output from the child process (where supported).
+    try:
+        is_py = isinstance(cmd, (list, tuple)) and len(cmd) > 0 and isinstance(cmd[0], str) and cmd[0].endswith('.py')
+        if not is_py and shutil.which('stdbuf'):
+            # Prepend stdbuf args
+            if isinstance(cmd, (list, tuple)):
+                cmd = ['stdbuf', '-oL', '-eL'] + list(cmd)
+            else:
+                cmd = f"stdbuf -oL -eL {cmd}"
+    except Exception:
+        pass
+    
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
     try:
