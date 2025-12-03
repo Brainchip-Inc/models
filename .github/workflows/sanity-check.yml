@@ -48,5 +48,5 @@ jobs:
         if: ${{ steps.find_files.outputs.count != '0' }}
         run: |
           FILES="${{ steps.find_files.outputs.files }}"
-          python CI/check_model.py --models $FILES
+          python CI/post_filter.py -- CI/check_model.py --models $FILES
 

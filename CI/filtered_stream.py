@@ -71,7 +71,6 @@ def filtered_output():
 
 def set_tf_silent(level:int=2):
     """Set TensorFlow/C++ logging environment and Python logging level.
-
     - `level` is the string value for `TF_CPP_MIN_LOG_LEVEL` ("0","1","2","3").
     - Call this BEFORE importing TensorFlow for earliest effect.
     """
