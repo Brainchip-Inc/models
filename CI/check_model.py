@@ -2,16 +2,10 @@ import argparse
 import os
 import subprocess
 
-# Configure TensorFlow
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
-import akida
 from cnn2snn import convert
 from quantizeml import load_model
 from compute_device import compute_min_device
-from filtered_stream import filtered_output
-
+from filtered_stream import redirect_and_filter_fds
 
 def process_model(file_path):
     try:       
@@ -38,8 +32,12 @@ if __name__ == "__main__":
     parser.add_argument("--models", nargs="+", help="Path to model files (.h5 or .onnx)")    
     args = parser.parse_args()
 
-    # Process each model
-    with filtered_output():
+    # Provides a context manager that redirects the process-level stdout/stderr 
+    # file descriptors (fd 1/2) into pipes and filters lines using regular 
+    # expressions in real time. This captures C/C++ level output (TensorFlow/CUDA) 
+    # that bypasses Python's `sys.stdout`.
+    with redirect_and_filter_fds():
+        # Process each model
         for model_file in args.models:
             if os.path.exists(model_file):
                 # Move this step of the YAML workflow into the Python script
