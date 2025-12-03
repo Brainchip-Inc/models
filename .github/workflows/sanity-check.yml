@@ -49,4 +49,3 @@ jobs:
         run: |
           FILES="${{ steps.find_files.outputs.files }}"
           python CI/post_filter.py -- CI/check_model.py --models $FILES
-

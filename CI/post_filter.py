@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """Simple post-capture filter for noisy commands.
-Runs a subprocess, captures stdout+stderr, and prints allowed lines to the
-console with a small configurable delay. This is useful in CI where
-low-level fd redirection may not work.
+Runs a subprocess, captures stdout+stderr, and prints allowed lines to the console. 
 Usage: 
     python CI/post_filter.py -- CI/check_model.py --models $FILES
-The `--` separates options to this script from the command to run.
+    The `--` separates options to this script from the command to run.
 """
 import os
 import sys
-import time
 import argparse
 import subprocess
 import re
 
-def run_and_filter(cmd, delay=0.05):
-
+def run_and_filter(cmd:str):
+    """Runs a subprocess, captures stdout+stderr, and prints filtred lines to the console. 
+    Args:
+        cmd (str): Python command sent from GitHub action 
+    """
     allow = re.compile(r'(Checking model:|Loading model:|✅.*needs \d+ Akida nodes)', re.IGNORECASE)
     deny = re.compile(
         r'(cuda|cufft|cudnn|cublas|tensorflow|xla|absl::InitializeLog|Unable to register|WARNING:|'
@@ -33,7 +33,7 @@ def run_and_filter(cmd, delay=0.05):
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
     try:
-        # Read lines as they arrive and print with a small delay
+        # Read lines as they arrive and print
         for raw in iter(proc.stdout.readline, ''):
             if raw is None:
                 break
@@ -47,10 +47,6 @@ def run_and_filter(cmd, delay=0.05):
                 else:
                     keep = True
 
-            # Small delay before printing
-            if delay and delay > 0:
-                time.sleep(delay)
-
             if keep:
                 print(line, flush=True)
 
@@ -62,10 +58,7 @@ def run_and_filter(cmd, delay=0.05):
             pass
 
 def main(argv=None):
-    p = argparse.ArgumentParser(prog='post_filter', description='Run command and filter its output with a small delay')
-    p.add_argument('--delay', type=float, default=0.05, help='Delay in seconds before printing each line')
-    p.add_argument('--deny', type=str, default=None, help='Optional deny regex (overrides default)')
-    p.add_argument('--allow', type=str, default=None, help='Optional allow regex (overrides default)')
+    p = argparse.ArgumentParser(prog='post_filter', description='Run command and filter its output')
     p.add_argument('cmd', nargs=argparse.REMAINDER, help='Command to run (use -- before the command)')
     args = p.parse_args(argv)
 
