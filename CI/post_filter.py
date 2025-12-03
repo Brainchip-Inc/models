@@ -10,13 +10,14 @@ Usage:
 
 The `--` separates options to this script from the command to run.
 """
-import re
+import os
 import sys
 import time
 import argparse
 import subprocess
+import re
 
-def run_and_filter(cmd):
+def run_and_filter(cmd, delay=0.05):
 
     allow = re.compile(r'(Checking model:|Loading model:|✅.*needs \d+ Akida nodes)', re.IGNORECASE)
     deny = re.compile(
@@ -24,7 +25,13 @@ def run_and_filter(cmd):
         r'failed call to|loop_optimizer\.cc|computation_placer|computation placer|gpu_device|Created device|'
         r'TF_FORCE_GPU_ALLOW_GROWTH|Overriding orig_value)'
         , re.IGNORECASE)        
-    delay=0.05
+    
+    # If the command is a Python script path and not executable, prefix
+    # with the current Python interpreter to avoid PermissionError on CI.
+    if isinstance(cmd, (list, tuple)) and cmd:
+        first = cmd[0]
+        if isinstance(first, str) and first.endswith('.py') and not os.access(first, os.X_OK):
+            cmd = [sys.executable] + list(cmd)
 
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
