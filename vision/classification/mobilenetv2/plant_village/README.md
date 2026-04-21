@@ -37,7 +37,6 @@ pip install \
 ## Load the quantized model and convert to Akida
 
 ```python
-from pathlib import Path
 import quantizeml
 from cnn2snn import convert, set_akida_version, AkidaVersion
 
