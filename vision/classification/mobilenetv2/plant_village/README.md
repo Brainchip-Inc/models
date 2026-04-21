@@ -62,7 +62,7 @@ akida_model.summary()
 
 ## References
 - MobileNetV2 — [Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
-- Dataset — [PlantVillage](https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset)
+- Dataset — [PlantVillage](https://www.tensorflow.org/datasets/catalog/plant_village)
 - TensorFlow [MobileNetV2 docs](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2)
 
 ## License
