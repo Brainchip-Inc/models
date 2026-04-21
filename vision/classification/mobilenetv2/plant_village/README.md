@@ -40,9 +40,7 @@ pip install \
 import quantizeml
 from cnn2snn import convert, set_akida_version, AkidaVersion
 
-MODEL_PATH = Path("mobilenet_v2_0.5_plant_village_i8_w8_a8.h5")
-
-keras_model = quantizeml.load_model(str(MODEL_PATH))
+keras_model = quantizeml.load_model("mobilenet_v2_0.5_plant_village_i8_w8_a8.h5")
 
 with set_akida_version(AkidaVersion.v2):
     akida_model = convert(keras_model)
