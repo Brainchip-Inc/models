@@ -48,6 +48,8 @@ def run_and_filter(cmd:str):
         except Exception:
             pass
 
+    return proc.returncode
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog='post_filter', description='Run command and filter its output')
     p.add_argument('cmd', nargs=argparse.REMAINDER, help='Command to run (use -- before the command)')
@@ -63,7 +65,7 @@ def main(argv=None):
     if cmd and cmd[0] == '--':
         cmd = cmd[1:]
 
-    run_and_filter(cmd)
+    return run_and_filter(cmd)
 
 if __name__ == '__main__':
     sys.exit(main())

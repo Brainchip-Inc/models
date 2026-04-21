@@ -50,6 +50,7 @@ jobs:
       - name: Run model checks
         if: steps.find_files.outputs.count != '0'
         run: |
+          set -e
           while read -r f; do
             [ -z "$f" ] && continue
             echo "Checking model: $f"
